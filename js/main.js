@@ -4,10 +4,13 @@ let restaurants,
 var newMap
 var markers = []
 
+
+
 /**
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
  */
 document.addEventListener('DOMContentLoaded', (event) => {
+  console.log('I just want to know this function is firing')
   initMap(); // added
   fetchNeighborhoods();
   fetchCuisines();
@@ -72,6 +75,7 @@ fillCuisinesHTML = (cuisines = self.cuisines) => {
  * Initialize leaflet map, called from HTML.
  */
 initMap = () => {
+  console.log(self)
   self.newMap = L.map('map', {
         center: [40.722216, -73.987501],
         zoom: 12,
