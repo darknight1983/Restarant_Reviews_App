@@ -197,7 +197,7 @@ nav h1 a {
 .restaurants-list {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-evenly;	
+	justify-content: space-evenly;
 }
 
 /* ====================== Restaurant Details ====================== */
