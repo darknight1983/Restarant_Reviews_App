@@ -1,4 +1,9 @@
 @charset "utf-8";
+
+/* Adding catch-all to make sure certain elements are responsive */
+img, embed, object, video {
+	max-width: 100%;
+}
 /* CSS Document */
 
 body,td,th,p{
@@ -254,15 +259,15 @@ nav h1 a {
   text-transform: uppercase;
 	width: 90%;
 }
-#restaurant-container, #reviews-container {
+#restaurant-container #reviews-container {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
   padding: 140px 40px 30px;
   width: 50%;
 }
-#reviews-container {
+/* #reviews-container {
   padding: 30px 40px 80px;
-}
+} */
 #reviews-container h2 {
   color: #f58500;
   font-size: 24pt;
