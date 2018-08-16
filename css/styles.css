@@ -194,11 +194,7 @@ nav h1 a {
   text-transform: uppercase;
 }
 
-.restaurants-list {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-evenly;
-}
+
 
 /* ====================== Restaurant Details ====================== */
 .inside header {
@@ -290,9 +286,4 @@ nav h1 a {
 }
 #restaurant-hours td {
   color: #666;
-}
-
-.flex-container {
-	display: flex;
-	flex-direction: column;
 }
