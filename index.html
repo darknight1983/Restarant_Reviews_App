@@ -53,8 +53,18 @@
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker
                .register('/sw.js')
-               .then(function() {
-                 console.log('Service Worker Registered');
+               .then(function(reg) {
+                 console.log('Service Worker Registered', reg.scope);
+
+                 if (!navigator.serviceWorker.controller) {
+                   // Content was loaded from the network
+                   return;
+                 }
+
+                 if (reg.waiting) {
+                   console.log("There is a worker waiting")
+                   reg.waiting.postMessage({ action: 'skipWaiting' })
+                 }
                });
     }
   </script>
